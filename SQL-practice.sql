@@ -12,7 +12,7 @@ CREATE TABLE Employees (
 );
 
 
--- Insert Employee 1
+-- Insert Employees values into Table
 INSERT INTO Employees 
 (employee_id, first_name, last_name, department, salary, hire_date, age, city, performance_rating)
 VALUES 
@@ -76,8 +76,8 @@ VALUES
 
 (30, 'Barbara', 'Barnes', 'Finance', 67000, '2016-07-19', 42, 'Sacramento', 4.7);
 
--- filtering:
--- Select all employees
+-- filtering by 
+--Select all employees
 SELECT * FROM Employees;
 
 -- Select only first and last names
@@ -95,7 +95,7 @@ SELECT * FROM Employees WHERE salary > 70000;
 -- Find employees from New York or Chicago
 SELECT * FROM Employees WHERE city IN ('New York', 'Chicago');
 
--- sorting:
+
 -- Sort employees by salary in descending order
 SELECT * FROM Employees ORDER BY salary DESC;
 
@@ -187,6 +187,8 @@ SELECT
 FROM Employees 
 GROUP BY department;
 
+
+--Comprehensive department report
 SELECT 
     department, 
     COUNT(*) AS total_employees, 
