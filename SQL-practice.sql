@@ -198,3 +198,9 @@ SELECT
 FROM Employees 
 GROUP BY department
 ORDER BY total_employees DESC;
+
+-- updating data
+SET SQL_SAFE_UPDATES = 0;
+UPDATE employees
+SET age = 45
+WHERE Employee_id = 5
